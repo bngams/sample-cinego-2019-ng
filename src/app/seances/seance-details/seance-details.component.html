@@ -1,0 +1,14 @@
+<mat-tab-group *ngIf="seance; else loading">
+  <mat-tab label="Infos">
+    <h1>{{seance.title}}</h1>
+  </mat-tab>
+  <mat-tab label="Séances"> Séances </mat-tab>
+  <mat-tab label="Autre"> Autre.. </mat-tab>
+</mat-tab-group>
+
+<ng-template #loading>
+  <h1 *ngIf="requeteTerminee == true">
+    Aucune séance sélectionnée
+  </h1>
+  <mat-spinner *ngIf="requeteTerminee == false"></mat-spinner>
+</ng-template>

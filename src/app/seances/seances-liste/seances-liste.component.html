@@ -1,0 +1,17 @@
+<h2>Liste des séances</h2>
+<div class="seances-container">
+  <mat-card class="seance-card" *ngFor="let seance of seancesListe">
+    <mat-card-header>
+      <mat-card-title>{{ seance.title }}</mat-card-title>
+      <mat-card-subtitle>18h00</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="getImage(seance.img)">
+    <mat-card-content>
+      <i>(1h30)</i>
+      <p>Lorem ispum...</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>VOIR</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

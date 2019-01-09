@@ -1,0 +1,12 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.menu-item {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.active {
+    text-decoration: underline;
+}
