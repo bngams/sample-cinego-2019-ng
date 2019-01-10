@@ -5,13 +5,16 @@ import { MaterialModule } from '../material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SeanceService } from './seance.service';
 import { SeanceDetailsComponent } from './seance-details/seance-details.component';
+import { SeanceFormComponent } from './seance-form/seance-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [SeancesListeComponent, SeanceDetailsComponent],
+  declarations: [SeancesListeComponent, SeanceDetailsComponent, SeanceFormComponent],
   imports: [
     CommonModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   exports: [
     SeancesListeComponent

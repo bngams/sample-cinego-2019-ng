@@ -19,4 +19,8 @@ export class SeanceService {
   get(id: number): Observable<Seance> {
     return this.http.get<Seance>('http://localhost:8282/seances/' + id);
   }
+
+  create(seance: Seance): Observable<Seance> {
+    return this.http.post<Seance>('http://localhost:8282/seances/', seance);
+  }
 }

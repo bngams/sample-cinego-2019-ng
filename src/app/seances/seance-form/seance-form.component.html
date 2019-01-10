@@ -1,0 +1,25 @@
+<h1>Création de séance</h1>
+<form #seanceForm="ngForm" class="seance-form" (ngSubmit)="saveSeance()">
+  <!-- error from controller -->
+  <div *ngIf="errorMsg.length > 0">
+    <p>{{errorMsg}}</p>
+  </div>
+  <mat-form-field class=" field-full-width">
+    <input matInput placeholder="Title" #inputTitle="ngModel" [(ngModel)]="seance.title" name="title" minlength="3"
+      required>
+  </mat-form-field>
+  <!-- error from template -->
+  <span *ngIf="inputTitle.invalid && (inputTitle.touched || inputTitle.dirty) ">
+    Required and min length 2
+  </span>
+
+  <mat-form-field class="field-full-width">
+    <input matInput placeholder="Image Url" [(ngModel)]="seance.img" name="img">
+  </mat-form-field>
+
+  <mat-form-field class="field-full-width">
+    <input matInput placeholder="Date" [(ngModel)]="seance.dateTime" name="dateTime" required>
+  </mat-form-field>
+
+  <button [disabled]="seanceForm.invalid" mat-raised-button color="primary">Save</button>
+</form>

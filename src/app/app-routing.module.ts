@@ -4,10 +4,12 @@ import { SeancesListeComponent } from './seances/seances-liste/seances-liste.com
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HomeComponent } from './components/home/home.component';
 import { SeanceDetailsComponent } from './seances/seance-details/seance-details.component';
+import { SeanceFormComponent } from './seances/seance-form/seance-form.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'seances', component: SeancesListeComponent },
+    { path: 'seances/create', component: SeanceFormComponent },
     { path: 'seances/details/:id', component: SeanceDetailsComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent }
